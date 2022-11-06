@@ -1,0 +1,14 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.5.3"
+  },
+  "scripts": {
+    "start": "node app.js -H 0.0.0.0 port 9000",
+    "dev": "nodemon app.js -H 0.0.0.0 port 9000"
+  }
+}
