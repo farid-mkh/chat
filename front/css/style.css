@@ -1,0 +1,258 @@
+/* Fix user-agent */
+:root{
+    --status-bar-h:30px
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+:lang(en) .container{
+    direction: ltr;
+}
+:lang(fa) .container{
+    direction: rtl;
+}
+
+html,
+input {
+    font-family: "VazirMatn", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    word-wrap: break-word;
+}
+
+.d-none {
+    display: none;
+}
+/* Pages */
+.pages {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Login Page */
+
+.login.page {
+    background-color: #000;
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.login.page .form {
+    height: 100px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.login.page .title {
+    font-size: 200%;
+}
+
+.login.page .usernameInput {
+    font-size: 200%;
+    color: rgb(30, 30, 30);
+}
+
+.login.page .title,
+.login.page .usernameInput {
+    font-weight: 100;
+}
+
+.inputMessage {
+    font-size: 100%;
+}
+
+.log {
+    color: gray;
+    font-size: 70%;
+    margin: 5px;
+    text-align: center;
+}
+
+/* Messages */
+
+.chatArea {
+    height: 100%;
+    padding-bottom: 60px;
+}
+
+.messages {
+    padding: 10px 20px 100px 20px;
+}
+
+.message.typing .messageBody {
+    color: gray;
+}
+
+
+/* Input */
+.input-message {
+    background: #ddd;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.inputMessage {
+    height: 60px;
+    border-radius: 1em;
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+}
+
+/** status bar ***/
+.status{
+    height: var(--status-bar-h);
+    background: #292929; 
+    color: white;
+    position: sticky;
+    top:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.status p {
+    margin: 0;
+}
+/** chat bubble */
+.talk-bubble {
+    --talk-bubble-bg: #0B93F6;
+    --talk-bubble-bg-receiver: #09133f;
+    --space-x: 3em;
+    --space-y: 0.75em;
+    padding: 40px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    margin: 10px;
+}
+
+.talk-bubble:before,
+.talk-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 27px;
+}
+
+.talk-bubble.sender {
+    color: var(--talk-bubble-color);
+    background: var(--talk-bubble-bg);
+    color: white;
+    align-self: flex-end;
+}
+
+.talk-bubble.sender:before {
+    right: -7px;
+    width: 20px;
+    background-color: var(--talk-bubble-bg);
+    border-bottom-left-radius: 16px 14px
+}
+
+.talk-bubble.sender:after {
+    right: -26px;
+    width: 26px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+}
+
+.talk-bubble__date {
+    right: var(--space-x);
+}
+
+.talk-bubble.receiver {
+    background: var(--talk-bubble-bg-receiver);
+    color: white;
+    align-self: flex-start;
+}
+
+.talk-bubble.receiver:before {
+    left: -7px;
+    width: 20px;
+    background-color: var(--talk-bubble-bg-receiver);
+    border-bottom-right-radius: 16px 14px;
+}
+
+.talk-bubble.receiver:after {
+    left: -26px;
+    width: 26px;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+}
+
+.talk-bubble__date {
+    right: var(--space-x);
+}
+
+.talk-bubble__date {
+    position: absolute;
+    bottom: var(--space-y);
+    font-size: 10px;
+    opacity: 50%;
+    direction: ltr;
+}
+
+.talk-bubble__creator {
+    position: absolute;
+    top: var(--space-y);
+    font-size: 10px;
+    opacity: 50%;
+    direction: ltr;
+    right: var(--space-x);
+}
+/** username-list **/
+.username-list{
+    height: 90px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    border-bottom: 1px solid;
+    border-color: #6d6d6d30;
+}
+.username-list div .avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.username-list div .name {
+    text-align: center;
+    color: #474747;
+}

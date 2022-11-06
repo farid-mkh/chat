@@ -8,7 +8,7 @@
     "socket.io": "^4.5.3"
   },
   "scripts": {
-    "start": "node app.js -H 0.0.0.0 port 9000",
-    "dev": "nodemon app.js -H 0.0.0.0 port 9000"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   }
 }
