@@ -4,7 +4,7 @@
 2. frontend: html, css, js 
 
 ## How to run
-> first check that you have installed node.js.
+> First make sure that you have installed node.js.
 1. To install packages 
 ```npm i``` or 
 ```yarn install```
